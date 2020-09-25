@@ -27,3 +27,4 @@ client/yarn.lock
 
 # editor configs
 /.vscode
+client/coverage/*
