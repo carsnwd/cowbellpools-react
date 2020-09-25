@@ -1,5 +1,5 @@
 {
-  "name": "padmapper-clone",
+  "name": "cowbellpools",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-coverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
     "prettier-write": "prettier -w *",
     "prettier-check": "prettier -C *"
@@ -49,5 +50,17 @@
   "devDependencies": {
     "@types/react-redux": "^7.1.9",
     "prettier": "2.1.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90,
+        "statements": 90
+      }
+    }
   }
 }
