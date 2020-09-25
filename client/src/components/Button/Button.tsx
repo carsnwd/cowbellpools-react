@@ -15,7 +15,7 @@ export class Button extends React.Component<IButtonProps> {
   render() {
     return (
       <a className={this.props.classes}>
-        <FontAwesomeIcon icon={this.props.icon} /> {this.props.label}
+        {this.props.icon ? <FontAwesomeIcon icon={this.props.icon} /> : null} {this.props.label}
       </a>
     );
   }
