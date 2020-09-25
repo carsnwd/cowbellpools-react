@@ -1,27 +1,27 @@
 .navbar {
-    .navbar-brand{
-        .navbar-item{
-            img{
-                max-height: 100%;
-            }
-        }
-        .navbar-burger{
-            height: 60px;
-            width: 60px;
-            .svg-inline--fa {
-                width: 30px;
-                height: 30px;
-                margin-left: 15px;
-                margin-top: 15px;
-            }
-        }
+  .navbar-brand {
+    .navbar-item {
+      img {
+        max-height: 100%;
+      }
     }
-    .navbar-end{
-        .svg-inline--fa {
-            margin-right: .5em;
-        }
-        .grid-display {
-            display: grid;
-        }
+    .navbar-burger {
+      height: 60px;
+      width: 60px;
+      .svg-inline--fa {
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+        margin-top: 15px;
+      }
     }
+  }
+  .navbar-end {
+    .svg-inline--fa {
+      margin-right: 0.5em;
+    }
+    .grid-display {
+      display: grid;
+    }
+  }
 }
