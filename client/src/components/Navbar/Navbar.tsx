@@ -1,8 +1,7 @@
 import React from 'react';
 import './Navbar.scss';
-import {Search} from '../Search/Search';
 import {Button} from '../Button/Button';
-import {faHome, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
+import {faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type NavbarState = {
@@ -38,14 +37,9 @@ export class Navbar extends React.Component<{}, NavbarState> {
         </div>
       
         <div className={"navbar-menu" + (this.state.isActive ? " is-active" : "")} id="main-nav">
-          <div className="navbar-start">
-            <Search/>
-          </div>
-      
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <Button classes="button is-light is-medium" icon={faHome} label="Post Pad"/>
                 <Button classes="button is-light is-medium" icon={faUser} label="Log In"/>
               </div>
             </div>
