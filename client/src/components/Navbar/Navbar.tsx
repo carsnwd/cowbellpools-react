@@ -4,10 +4,20 @@ import { Button } from "../Button/Button";
 import { faUser, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+/**
+ * @name NavbarState
+ * @description Holds the state of Navbar not pertinant to rest of app.
+ * @property {boolean} isHamburgerActive - Weither the hamburger menu is showing or hiding.
+ */
 type NavbarState = {
   isHamburgerActive: boolean;
 };
 
+/**
+ * @component
+ * @name Navbar
+ * @description Encapsulates the Bulma Navbar.
+ */
 export class Navbar extends React.Component<{}, NavbarState> {
   constructor(props: Readonly<{}>) {
     super(props);
@@ -16,7 +26,12 @@ export class Navbar extends React.Component<{}, NavbarState> {
       isHamburgerActive: false,
     };
   }
-  //Toggles on and off the hamburger menu from being open and closed.
+  /**
+   * @private
+   * @method
+   * @name toggleBurgerState
+   * @description Toggles the burger menu from showing or hiding.
+   */
   toggleBurgerState() {
     this.setState((prevState) => ({ isHamburgerActive: !prevState.isHamburgerActive }));
   }
