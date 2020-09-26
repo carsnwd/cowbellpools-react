@@ -4,7 +4,7 @@ import { Navbar } from "../Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" role="app">
       <Navbar />
     </div>
   );

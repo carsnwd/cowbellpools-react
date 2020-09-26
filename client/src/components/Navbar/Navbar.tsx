@@ -5,7 +5,7 @@ import { faUser, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type NavbarState = {
-  isActive: boolean;
+  isHamburgerActive: boolean;
 };
 
 export class Navbar extends React.Component<{}, NavbarState> {
@@ -13,23 +13,24 @@ export class Navbar extends React.Component<{}, NavbarState> {
     super(props);
     this.toggleBurgerState = this.toggleBurgerState.bind(this);
     this.state = {
-      isActive: false,
+      isHamburgerActive: false,
     };
   }
+  //Toggles on and off the hamburger menu from being open and closed.
   toggleBurgerState() {
-    this.setState((prevState) => ({ isActive: !prevState.isActive }));
+    this.setState((prevState) => ({ isHamburgerActive: !prevState.isHamburgerActive }));
   }
   render() {
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
+          <a className="navbar-item" href="https://bulma.io"> 
             <img src={require("./logo.png")} width="187" height="42" />
           </a>
           <a
-            role="button"
+            role="burger-button"
             className={
-              "navbar-burger burger" + (this.state.isActive ? " is-active" : "")
+              "navbar-burger burger" + (this.state.isHamburgerActive ? " is-active" : "")
             }
             onClick={this.toggleBurgerState}
             aria-label="menu"
@@ -41,7 +42,7 @@ export class Navbar extends React.Component<{}, NavbarState> {
         </div>
 
         <div
-          className={"navbar-menu" + (this.state.isActive ? " is-active" : "")}
+          className={"navbar-menu" + (this.state.isHamburgerActive ? " is-active" : "")}
           id="main-nav"
         >
           <div className="navbar-end">
@@ -51,6 +52,7 @@ export class Navbar extends React.Component<{}, NavbarState> {
                   classes="button is-light is-medium"
                   icon={faUser}
                   label="Log In"
+                  onClickHandler={() => {}}
                 />
               </div>
             </div>

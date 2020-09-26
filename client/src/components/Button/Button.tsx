@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 type IButtonProps = {
-  icon: IconDefinition;
+  icon?: IconDefinition;
   label?: string;
   classes?: string;
+  onClickHandler: Function;
 };
 
 export class Button extends React.Component<IButtonProps> {
@@ -14,7 +15,7 @@ export class Button extends React.Component<IButtonProps> {
   }
   render() {
     return (
-      <a className={this.props.classes}>
+      <a className={this.props.classes} onClick={() => this.props.onClickHandler()} type="button">
         {this.props.icon ? <FontAwesomeIcon icon={this.props.icon} /> : null} {this.props.label}
       </a>
     );
