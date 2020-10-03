@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.sass";
 import { Navbar } from "../Navbar/Navbar";
-import { Column, Columns, Li, Menu, Panel } from "trunx";
+import { Column, Columns } from "trunx";
 import SideMenu from "../SideMenu/SideMenu";
 
 function App() {

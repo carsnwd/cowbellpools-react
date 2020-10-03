@@ -1,4 +1,4 @@
-import { faSign, faSignInAlt, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faSignInAlt, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import { Button } from "trunx";
@@ -27,20 +27,12 @@ export default class NavbarEnd extends Component<{}, NavbarEndState> {
     return (
       <div className="navbar-end">
         <div className="navbar-item">
-          <Button
-            onClick={this.toggleLoginModal}
-            isLight
-            isMedium
-          >
+          <Button onClick={this.toggleLoginModal} isLight isMedium>
             <FontAwesomeIcon icon={faUser} /> Log In
           </Button>
         </div>
         <div className="navbar-item">
-          <Button
-            onClick={this.toggleLoginModal}
-            isPrimary
-            isMedium
-          >
+          <Button onClick={this.toggleLoginModal} isPrimary isMedium>
             <FontAwesomeIcon icon={faSignInAlt} /> Sign Up
           </Button>
         </div>
