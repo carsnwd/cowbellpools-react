@@ -1,8 +1,8 @@
 import React from "react";
 import "./Navbar.scss";
-import { faUser, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Button from "trunx/component/Button";
+import NavbarEnd from "../NavbarEnd/NavbarEnd";
 
 /**
  * @name NavbarState
@@ -23,7 +23,7 @@ export class Navbar extends React.Component<{}, NavbarState> {
     super(props);
     this.toggleBurgerState = this.toggleBurgerState.bind(this);
     this.state = {
-      isHamburgerActive: false,
+      isHamburgerActive: false
     };
   }
   /**
@@ -40,7 +40,7 @@ export class Navbar extends React.Component<{}, NavbarState> {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="https://bulma.io">
-            <img src={require("./logo.png")} width="187" height="42" />
+            <img src={require("./logo.png")} alt="cowbell pools" width="187" height="42" />
           </a>
           <a
             role="burger-button"
@@ -52,6 +52,7 @@ export class Navbar extends React.Component<{}, NavbarState> {
             aria-label="menu"
             aria-expanded="false"
             data-target="main-nav"
+            href="#"
           >
             <FontAwesomeIcon icon={faBars} />
           </a>
@@ -63,15 +64,7 @@ export class Navbar extends React.Component<{}, NavbarState> {
           }
           id="main-nav"
         >
-          <div className="navbar-end">
-            <div className="navbar-item">
-              <div className="buttons">
-                <Button className="button is-light is-medium" onClick={() => {alert("oh cool")}}>
-                  <FontAwesomeIcon icon={faUser} /> Log In
-                </Button>
-              </div>
-            </div>
-          </div>
+          <NavbarEnd/>
         </div>
       </nav>
     );
