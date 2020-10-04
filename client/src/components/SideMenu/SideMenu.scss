@@ -1,5 +1,20 @@
 @import "../App/App.sass";
 
 .side-menu{
-    background-color: $grey-light;
+    background-color: $white;
+    padding-top: 20px;
+    .menu {
+        padding-left: 20px;
+    }
+    .menu-label{
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+}
+
+.a-block{
+    background-color: $primary;
+    height: 250px;
+    width: 300px;
+    margin-bottom: 10px;
 }
