@@ -1,6 +1,7 @@
 import { faFootballBall, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Menu, Section } from "trunx";
 import "./SideMenu.scss";
 
@@ -14,10 +15,7 @@ export default class SideMenu extends Component {
           </Menu.Label>
           <Menu.List>
             <li>
-              <a>Make Picks</a>
-            </li>
-            <li>
-              <a>View Picks</a>
+              <Link to="/mypicks">Make Picks</Link>
             </li>
           </Menu.List>
           <Menu.Label>
@@ -25,13 +23,13 @@ export default class SideMenu extends Component {
           </Menu.Label>
           <Menu.List>
             <li>
-              <a>My Groups</a>
+              <Link to="/mygroups">My Groups</Link>
             </li>
             <li>
-              <a>Create Group</a>
+              <Link to="/newgroup">Create Group</Link>
             </li>
             <li>
-              <a>Join Group</a>
+              <Link to="/joingroup">Join Group</Link>
             </li>
           </Menu.List>
         </Menu>
