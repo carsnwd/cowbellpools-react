@@ -6,7 +6,7 @@ import { Column, Columns } from "trunx";
 import SideMenu from "../SideMenu/SideMenu";
 import Foot from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
-import {ROUTES} from "../../constants/routes"; 
+import {ROUTES} from "../../constants"; 
 
 function App() {
   return (

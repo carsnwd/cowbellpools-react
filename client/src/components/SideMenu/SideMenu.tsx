@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Menu, Section } from "trunx";
 import "./SideMenu.scss";
+import {ROUTES} from "../../constants";
 
 export default class SideMenu extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class SideMenu extends Component {
           </Menu.Label>
           <Menu.List>
             <li>
-              <Link to="/mypicks">Make Picks</Link>
+              <Link to={ROUTES.MY_PICKS}>Make Picks</Link>
             </li>
           </Menu.List>
           <Menu.Label>
@@ -23,13 +24,13 @@ export default class SideMenu extends Component {
           </Menu.Label>
           <Menu.List>
             <li>
-              <Link to="/mygroups">My Groups</Link>
+              <Link to={ROUTES.MY_GROUPS}>My Groups</Link>
             </li>
             <li>
-              <Link to="/newgroup">Create Group</Link>
+              <Link to={ROUTES.NEW_GROUP}>Create Group</Link>
             </li>
             <li>
-              <Link to="/joingroup">Join Group</Link>
+              <Link to={ROUTES.JOIN_GROUP}>Join Group</Link>
             </li>
           </Menu.List>
         </Menu>
