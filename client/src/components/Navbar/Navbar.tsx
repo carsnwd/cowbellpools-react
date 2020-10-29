@@ -6,8 +6,8 @@ import NavbarEnd from "../NavbarEnd/NavbarEnd";
 
 /**
  * @name NavbarState
- * @description Holds the state of Navbar not pertinant to rest of app.
- * @property {boolean} isHamburgerActive - Weither the hamburger menu is showing or hiding.
+ * @description Holds the state of Navbar not pertinent to rest of app.
+ * @property {boolean} isHamburgerActive - Whether the hamburger menu is showing or hiding.
  */
 type NavbarState = {
   isHamburgerActive: boolean;
